@@ -62,6 +62,12 @@
     "iostream": "cpp",
     "ostream": "cpp",
     "deque": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "array": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp",
+    "span": "cpp"
   }
 }
