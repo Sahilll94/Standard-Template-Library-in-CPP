@@ -61,6 +61,7 @@
     "*.dbclient-js": "javascript",
     "iostream": "cpp",
     "ostream": "cpp",
-    "deque": "cpp"
+    "deque": "cpp",
+    "queue": "cpp"
   }
 }
