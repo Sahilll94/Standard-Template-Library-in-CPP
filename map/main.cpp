@@ -13,6 +13,8 @@ int main()
     mp.insert({2,3});
     mp.emplace(4,5); // {1,2} then {2,3} then {4,5}
     mp.emplace(3,8); // {1,2} then [2,3] then {3,8} then {4,5} SORTED as per key;
+
+    // To update a key's value
     mp[3] = 9; // It will update the value of key -> 3 with value 9 .....  {1,2} then {2,3} then {3,9} then {4,5}
 
     // accessing key and value using first and second;
@@ -21,8 +23,15 @@ int main()
         cout<<"Key: "<<i.first<<" Value: "<<i.second<<endl;
     }
 
+    auto it = mp.lower_bound(2); //If 2 key is present then it will return it's index;
 
+    cout<<it->first<<" ";
+    cout<<it->second<<endl;
 
+    auto i = mp.upper_bound(2);
+
+    cout<<i->first<<" ";
+    cout<<i->second;
 
     return 0;
 }
