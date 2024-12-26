@@ -11,6 +11,7 @@ Welcome to the **Standard Template Library in C++** repository! This repository 
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [STL Sets and Maps Guide](#stl-sets-and-maps-guide)
 
 ## Overview
 
@@ -91,6 +92,54 @@ int main() {
 }
 ```
 
+# STL Sets and Maps Guide
+
+## Sets in C++
+
+```
+┌─────────────────────────────────────────────┐
+│                    SETS                     │
+├───────────────┬────────────┬───────────────┤
+│     SET       │  MULTISET  │ UNORDERED_SET │
+├───────────────┼────────────┼───────────────┤
+│ [2,3,4,5]     │[2,2,3,3,4] │ [5,2,4,3]     │
+│               │            │               │
+│ ✓ Unique     │ × Not      │ ✓ Unique     │
+│ ✓ Sorted     │   Unique   │ × Not        │
+│              │ ✓ Sorted   │   Sorted     │
+└───────────────┴────────────┴───────────────┘
+```
+
+## Maps in C++
+
+```
+┌─────────────────────────────────────────────┐
+│                    MAPS                     │
+├───────────────┬────────────┬───────────────┤
+│     MAP       │  MULTIMAP  │ UNORDERED_MAP │
+├───────────────┼────────────┼───────────────┤
+│{1:"A",2:"B"}  │{1:"A",     │ {2:"B",       │
+│               │ 1:"B",     │  1:"A",       │
+│               │ 2:"C"}     │  4:"D"}       │
+│ ✓ Unique Keys │ × Multiple │ ✓ Unique Keys │
+│ ✓ Sorted Keys │   Keys     │ × Not        │
+│               │ ✓ Sorted   │   Sorted     │
+└───────────────┴────────────┴───────────────┘
+```
+
+### Time Complexities
+
+#### Sets
+- Set: O(log n) for insertion/deletion
+- Multiset: O(log n) for insertion/deletion
+- Unordered_set: O(1) average, O(n) worst case
+
+#### Maps
+- Map: O(log n) for insertion/deletion
+- Multimap: O(log n) for insertion/deletion
+- Unordered_map: O(1) average, O(n) worst case
+
+
 ## Usage
 
 To explore the code:
@@ -129,4 +178,3 @@ Contributions are welcome! If you find any issues or have improvements or sugges
 ## License
 
 This repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
