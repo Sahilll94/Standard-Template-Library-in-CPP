@@ -10,6 +10,7 @@ int countZero(vector<vector<int>>&matrix)
 
     for(auto i:matrix)
     {
+        // all_of is used to check if the whole array has the specific element  or not;
         if(all_of(i.begin(),i.end(),[](int x) {return x==0;}))
         {
             count++;
